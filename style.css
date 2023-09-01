@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微軟正黑體", sans-serif;
+}
+
+:root {
+  --main-color: #18b8c6;
+  --text-color: #1a596d;
+}
+
+body {
+  background-image: url(./assets/bg.jpg);
+}
+
+#way_mobile,
+#p_title_m,
+#title-m {
+  display: none;
+}
+
+/* header--------------- */
+header {
+  width: 100%;
+  background-color: var(--main-color);
+  border-bottom: 10px solid transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 2016畢業季 */
+header .img2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* facebook and home logo */
+.header-logo {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5px;
+  top: 50px;
+}
+
+.header-logo img {
+  padding-top: 10px;
+}
+
+/* 選單我用button做 */
+header .img3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+header .img3 button {
+  border-radius: 30px;
+  outline: none;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+header .img3 button.active {
+  background-color: yellow;
+}
+
+.header-border {
+  background-image: url("./assets/header_l.jpg");
+  height: 8px;
+  width: 100%;
+}
+
+/* main---------------------- */
+/* all main element */
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* 圖片與介紹文案 */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.main-contanier {
+  display: flex;
+  margin-top: 15px;
+}
+
+.main-hat img {
+  margin-top: 8px;
+}
+
+.main p {
+  color: #818181;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* 釘在左上的圈圈 */
+.main-logo {
+  display: flex;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: var(--text-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: #fff;
+  top: -60px;
+  left: -50px;
+}
+
+/* 四個區塊style */
+.info {
+  margin: 60px auto;
+  border: 1.5px solid var(--text-color);
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 30px;
+  width: 760px;
+}
+
+.info-content span {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.info-content p {
+  color: #6c6c6c;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.info-container {
+  position: relative;
+  display: flex;
+}
+
+.info-girl1 {
+  position: absolute;
+  right: -35px;
+  bottom: 0px;
+}
+
+.info-container.girl2 {
+  flex-direction: column;
+}
+
+.info-girl2 {
+  position: absolute;
+  left: -80px;
+  bottom: 20px;
+}
+
+/* 賽程說明的圖片 */
+.info-part2-img {
+  margin-left: 3.5rem;
+}
+
+.info-content ul {
+  margin: 0 10px;
+}
+
+.info-content li {
+  list-style: none;
+  text-align: justify;
+  padding: 10px 0;
+}
+
+.info-content p {
+  text-align: justify;
+}
+
+/* footer---------------------  */
+footer {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* footer所有的圖片 */
+.footer-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 30px;
+}
+
+.footer-img-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 執行單位and特別感謝logo */
+.footer-logo {
+  display: flex;
+  width: 75px;
+  height: 75px;
+  background: rgb(95, 102, 95);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: #fff;
+
+}
+
+.footer-bottom {
+  width: 100%;
+  border-top: 1px solid gray;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* RWD-------------------------- */
+
+@media screen and (max-width:768px) {
+
+  #girl1,
+  #girl2,
+  #way_p,
+  #hat,
+  #p_title,
+  #img3,
+  #header-logo,
+  #buttom-m {
+    display: none;
+  }
+
+  #p_title_m,
+  #way_mobile,
+  #title-m {
+    display: block;
+  }
+
+  #title {
+    width: 100%;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .info-container {
+    padding: 1rem;
+  }
+
+  .info-part2-img {
+    margin: 0;
+  }
+
+  #way_mobile {
+    width: 100%;
+  }
+
+  #p_title_m {
+    width: 90%;
+  }
+
+  .main-logo {
+    transform: translate(50%, -50%);
+    right: 50%;
+    top: -10px;
+    left: unset;
+  }
+
+  .info-content {
+    margin-top: 20px;
+  }
+
+  .footer-all {
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 0;
+  }
+
+  .footer-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 0;
+  }
+
+  .footer-img-block {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0;
+  }
+
+  /* 因為border會多1px出來導致block被擠下去所以減掉1px解決 */
+  .little-left {
+    width: calc(50% - 1px);
+  }
+
+  .footer-img-block img {
+    width: 100%;
+  }
+
+  /* 使用nth-child個別修改 */
+  .little-left:nth-child(2) {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+  .little-left:nth-child(3) {
+    border-bottom: 1px solid gray;
+  }
+
+  .little-left:nth-child(4) {
+    border-right: 1px solid gray;
+  }
+
+}
